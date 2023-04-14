@@ -9,19 +9,30 @@ import {Usuario} from './shared/modelo/usuario';
 export class AppComponent {
   title = 'primeiro-angular-alunos';
 
-  usuario: Usuario;
+  usuarioDeManutencao: Usuario;
   usuarios: Array<Usuario>;
   constructor() {
-    this.usuario = new Usuario();
+    this.usuarioDeManutencao = new Usuario('', 0);
     this.usuarios = [
-      new Usuario('u1', 20),
-      new Usuario('u2', 24),
-      new Usuario('u3', 25)
+      new Usuario('carlos eduardo', 20, '123'),
+      new Usuario('Filipe Augusto', 24, '456'),
+      new Usuario('ANDRÉ PADILHA', 25, '789')
     ];
   }
 
   cadastrar(): void {
-    this.usuarios.push(this.usuario);
-    this.usuario = new Usuario();
+    this.usuarios.push(this.usuarioDeManutencao);
+    this.usuarioDeManutencao = new Usuario();
+  }
+
+  excluir(usuarioARemover: Usuario): void {
+    const indx = this.usuarios.findIndex(usuario =>
+      usuario.cpf === usuarioARemover.cpf);
+
+    this.usuarios.splice(indx, 1);
+  }
+
+  editar(usuario: Usuario): void {
+    this.usuarioDeManutencao = usuario;
   }
 }
