@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListagemFornecedoresComponent } from './listagem-fornecedores/listagem-fornecedores.component';
-import { MantemFornecedoresComponent } from './mantem-fornecedor/mantem-fornecedor.component';
+import { MantemFornecedorComponent } from './mantem-fornecedor/mantem-fornecedor.component'
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
@@ -19,7 +19,8 @@ import {RouterLink} from '@angular/router';
 @NgModule({
   declarations: [
     ListagemFornecedoresComponent,
-    MantemFornecedoresComponent
+    MantemFornecedorComponent
+    
 
   ],
   imports: [
@@ -38,7 +39,8 @@ import {RouterLink} from '@angular/router';
 
   exports : [
     ListagemFornecedoresComponent,
-    MantemFornecedoresComponent
+    MantemFornecedorComponent
+    
   ]
 })
 
