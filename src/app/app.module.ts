@@ -15,10 +15,12 @@ import { CpfPipe } from './pipes/pipe/cpf.pipe';
 import {MatMenuModule} from '@angular/material/menu';
 import {LayoutModule} from './layout/layout.module';
 import {UsuarioModule} from './usuario/usuario.module';
+import { CnpjPipe } from './pipes/pipe/cnpj.pipe';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

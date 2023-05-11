@@ -1,0 +1,17 @@
+<mat-card class="card-cadastro">
+    <mat-card-content>
+      <mat-form-field appearance="fill">
+        <input matInput [(ngModel)]="fornecedorDeManutencao.nome" placeholder="Digite o nome">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <input matInput [(ngModel)]="fornecedorDeManutencao.pontos" placeholder="Digite a pontuação">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <input matInput [(ngModel)]="fornecedorDeManutencao.cnpj" placeholder="Digite o CNPJ">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="manter()">{{nomeBotaoManutencao}}</button>
+    </mat-card-actions>
+  </mat-card>
